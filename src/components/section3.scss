@@ -1,0 +1,117 @@
+.section3 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding: 0 14%;
+  background: rgb(247, 206, 104);
+  background: radial-gradient(
+    circle,
+    rgba(247, 206, 104, 1) 24%,
+    rgba(251, 199, 117, 1) 100%
+  );
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/logo-bg.png);
+    background-position: center;
+    background-size: cover;
+    opacity: 0.08;
+    z-index: 0;
+  }
+
+  .top {
+    img {
+      width: 30vw;
+    }
+  }
+
+  .bottom {
+    text-align: center;
+    max-width: 800px;
+    transform: translateY(100%);
+
+    h1 {
+      margin-bottom: 30px;
+      font-size: 3rem;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      border: 1px solid;
+      border-radius: 2px;
+      background: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+
+      &:hover {
+        background-color: black;
+        color: white;
+        border: 1px solid black;
+      }
+    }
+  }
+
+  .animate__animated.animate__slideInDown .animate__animated.animate__zoomIn {
+    --animate-duration: 1.5s;
+  }
+}
+
+@media (max-width: 1500px) {
+  .section3::before {
+    display: none;
+  }
+
+  .section3 {
+    .top {
+      img {
+        width: 450px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .section3 {
+    .bottom {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .section3 {
+    .top {
+      img {
+        width: 350px;
+      }
+    }
+    .bottom {
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .section3 {
+    .top {
+      img {
+        width: 250px;
+      }
+    }
+  }
+}
